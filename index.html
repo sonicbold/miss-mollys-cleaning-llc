@@ -1,759 +1,762 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="color-scheme" content="light dark" />
-<link rel="icon" href="data:," />
-<title>Miss Molly's Cleaning LLC — House Cleaning &amp; Janitorial in Bozeman, MT</title>
-<meta name="description" content="Miss Molly's Cleaning LLC — locally owned house cleaning and commercial janitorial in Bozeman, MT. Standard, deep, move-in/out and recurring cleans. Free quotes by call or text to (406) 579-6115." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet" />
-<style>
-:root{
-  --bg:#F3F7F0; --surface:#ffffff; --surface-2:#eef6f4; --ink:#12312e; --ink-soft:#47635f;
-  --teal:#0e7a6d; --teal-dark:#0a5c53; --teal-bright:#14a08e; --mint:#dff2ec; --mint-2:#cdebe2;
-  --amber:#f2a81d; --line:#dcebe7; --placeholder:#b45309; --placeholder-bg:#fef3c7;
-  --shadow:0 10px 30px rgba(10,60,53,.10); --shadow-lg:0 22px 48px rgba(10,60,53,.16);
-  --radius:18px;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0c1a18; --surface:#122623; --surface-2:#17332e; --ink:#eaf6f3; --ink-soft:#a9c6c0;
-    --teal:#2bb39f; --teal-dark:#7fd8c7; --teal-bright:#2bb39f; --mint:#173d36; --mint-2:#1d4a41;
-    --line:#24443e; --placeholder:#fbbf24; --placeholder-bg:#3a2f10;
-    --shadow:0 10px 30px rgba(0,0,0,.35); --shadow-lg:0 22px 48px rgba(0,0,0,.45);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miss Molly's Cleaning LLC | Honest, Down-Home House & Commercial Cleaning</title>
+  <meta name="description" content="Miss Molly's Cleaning LLC in Bozeman, MT — No time wasters, no funny business. Honest residential cleaning, laundry, coffee shops, and commercial jobs. Clear $70/hr pricing and easy booking! Call or text (406) 579-6115.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Miss Molly's Cleaning LLC | Good, Honest Cleaning">
+  <meta property="og:description" content="Hey! Need a clean? You're in the right place. Homes, laundry, coffee shops & custom jobs with straightforward $70/hr pricing. Call or text (406) 579-6115.">
+  <meta property="og:image" content="deep.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🧹</text></svg>">
+
+  <!-- Google Fonts: Fraunces (warm, bold, personality serif), Caveat (sassy handwritten accents), Plus Jakarta Sans (super readable body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600;1,9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CleaningService",
+    "name": "Miss Molly's Cleaning LLC",
+    "image": "deep.jpg",
+    "telephone": "+14065796115",
+    "areaServed": "Bozeman, Belgrade, Four Corners, Manhattan, Gallatin Gateway, Three Forks, Livingston, Big Sky, MT",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bozeman",
+      "addressRegion": "MT",
+      "addressCountry": "US"
+    },
+    "description": "Down-home, honest, and reliable house cleaning, laundry services, coffee shop cleaning, and commercial cleaning with clear $70/hr pricing and zero funny business.",
+    "priceRange": "$70-$75/hr",
+    "openingHours": "Mo-Sa 08:00-18:00"
   }
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
-body{margin:0;font-family:"Nunito Sans",system-ui,-apple-system,Arial,"Liberation Sans",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16.5px;padding-bottom:76px}
-@media(min-width:820px){body{padding-bottom:0}}
-h1,h2,h3,h4{font-family:"Nunito",system-ui,Arial,"Liberation Sans",sans-serif;line-height:1.15;margin:0;color:var(--ink)}
-p{margin:0}
-a{color:var(--teal-dark)}
-img{max-width:100%;display:block}
-.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
-.ph{background:var(--placeholder-bg);color:var(--placeholder);border-radius:6px;padding:0 .32em;font-weight:700;white-space:nowrap;font-size:.94em}
-section{padding:64px 0}
-.section-head{max-width:680px;margin:0 0 34px}
-.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.kicker{display:inline-flex;align-items:center;gap:8px;font-family:"Nunito";font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
-.kicker::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--teal-bright)}
-.section-head.center .kicker::after{content:"";width:22px;height:3px;border-radius:2px;background:var(--teal-bright)}
-.section-head h2{font-size:clamp(1.7rem,4.5vw,2.45rem);font-weight:900;letter-spacing:-.01em}
-.section-head p{margin-top:12px;color:var(--ink-soft);font-size:1.06rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:"Nunito",Arial,sans-serif;font-weight:800;font-size:1rem;white-space:nowrap;border-radius:999px;padding:14px 26px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease, background .15s ease}
-@media(max-width:559px){.header-cta .btn{padding:9px 15px;font-size:.88rem}.logo-sub{display:none}.logo-mark{width:38px;height:38px;border-radius:11px}.logo-name{font-size:1rem}}
-.btn svg{width:19px;height:19px;flex:none}
-.btn-primary{background:var(--teal);color:#fff;box-shadow:0 10px 22px rgba(14,122,109,.28)}
-.btn-primary:hover{background:var(--teal-dark);transform:translateY(-1px)}
-.btn-call{background:var(--ink);color:#fff}
-@media(prefers-color-scheme:dark){.btn-call{background:#eaf6f3;color:#0c1a18}}
-.btn-call:hover{transform:translateY(-1px)}
-.btn-ghost{background:var(--surface);color:var(--teal-dark);border-color:var(--line)}
-.btn-ghost:hover{border-color:var(--teal)}
-.btn-text{background:#fff;color:#0a5c53;border-color:#cdebe2}
-.btn-sm{padding:10px 18px;font-size:.92rem}
-
-/* Demo ribbon */
-
-/* Header */
-header.site{position:sticky;top:0;z-index:60;background:color-mix(in srgb, var(--surface) 92%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.header-in{display:flex;align-items:center;gap:14px;padding:12px 0}
-.logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-width:0}
-.logo-mark{width:42px;height:42px;flex:none;border-radius:13px;background:var(--teal);display:grid;place-items:center;color:#fff}
-.logo-mark svg{width:24px;height:24px}
-.logo-name{font-family:"Nunito";font-weight:900;font-size:1.06rem;line-height:1.15}
-.logo-sub{font-size:.78rem;color:var(--ink-soft);font-weight:600}
-nav.main{display:none;margin-left:auto;gap:26px}
-nav.main a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem}
-nav.main a:hover{color:var(--teal)}
-.header-cta{margin-left:auto;display:flex;gap:9px;align-items:center}
-@media(min-width:900px){nav.main{display:flex}.header-cta{margin-left:0}}
-.header-phone{display:none}
-@media(min-width:560px){.header-phone{display:inline-flex}}
-
-/* Hero */
-.hero{padding:44px 0 60px;background:linear-gradient(180deg,var(--mint) 0%, var(--bg) 88%)}
-.hero-grid{display:grid;gap:36px;align-items:center}
-@media(min-width:940px){.hero-grid{grid-template-columns:1.05fr .95fr}}
-.local-badge{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:700;font-size:.86rem;box-shadow:var(--shadow)}
-.local-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--teal-bright)}
-.hero h1{font-size:clamp(2.15rem,6.2vw,3.4rem);font-weight:900;letter-spacing:-.015em;margin:18px 0 14px}
-.hero h1 .accent{color:var(--teal)}
-.hero-sub{font-size:1.13rem;color:var(--ink-soft);max-width:34em}
-.rating-pill{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:20px 0 4px;font-weight:700}
-.stars{color:var(--amber);letter-spacing:2px;font-size:1.05rem;line-height:1}
-.rating-pill .sep{color:var(--ink-soft);font-weight:600}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:11px;margin:22px 0 18px}
-.hero-note{font-size:.9rem;color:var(--ink-soft);font-weight:600}
-.trust-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.chip{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:.85rem;font-weight:700}
-.chip svg{width:15px;height:15px;color:var(--teal)}
-.hero-media{position:relative}
-.hero-media img{border-radius:26px;box-shadow:var(--shadow-lg);aspect-ratio:4/3.1;object-fit:cover;width:100%}
-.float-card{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:13px 16px}
-.float-card .big{font-family:"Nunito";font-weight:900;font-size:1.25rem;line-height:1.1}
-.float-card .small{font-size:.82rem;color:var(--ink-soft);font-weight:600}
-.fc-years{left:-8px;bottom:26px}
-.fc-text{right:-6px;top:20px;display:flex;gap:10px;align-items:center}
-.fc-text .icon{width:38px;height:38px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:var(--teal)}
-.fc-text svg{width:20px;height:20px}
-@media(max-width:480px){.fc-years{left:8px}.fc-text{right:8px}}
-
-/* Trust bar */
-.trustbar{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.trustbar-in{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
-@media(min-width:860px){.trustbar-in{grid-template-columns:repeat(4,1fr)}}
-.trust-item{padding:22px 16px;text-align:center;border-right:1px solid var(--line)}
-.trust-item:last-child{border-right:none}
-@media(max-width:859px){.trust-item:nth-child(2){border-right:none}.trust-item:nth-child(1),.trust-item:nth-child(2){border-bottom:1px solid var(--line)}}
-.trust-item .v{font-family:"Nunito";font-weight:900;font-size:1.45rem;color:var(--teal-dark)}
-.trust-item .l{font-size:.85rem;font-weight:700;color:var(--ink-soft)}
-
-/* Tracks */
-.tracks{display:grid;gap:22px}
-@media(min-width:880px){.tracks{grid-template-columns:1fr 1fr}}
-.track{background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.track img{height:210px;width:100%;object-fit:cover}
-.track-body{padding:26px;display:flex;flex-direction:column;gap:12px;flex:1}
-.track-body h3{font-size:1.45rem;font-weight:900}
-.track-body p{color:var(--ink-soft)}
-.track ul{list-style:none;margin:4px 0 8px;padding:0;display:grid;gap:8px}
-.track li{display:flex;gap:9px;font-weight:600;font-size:.97rem}
-.track li svg{width:18px;height:18px;color:var(--teal);flex:none;margin-top:3px}
-.track .btn{margin-top:auto;align-self:flex-start}
-
-/* Services */
-.svc-grid{display:grid;gap:18px;grid-template-columns:1fr}
-@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:1020px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
-.svc{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)}
-.svc img{height:150px;width:100%;object-fit:cover}
-.svc-icon{height:150px;display:grid;place-items:center;background:var(--mint);color:var(--teal)}
-.svc-icon svg{width:52px;height:52px}
-.svc-body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
-.svc-body h3{font-size:1.13rem;font-weight:800}
-.svc-body p{color:var(--ink-soft);font-size:.94rem;flex:1}
-.svc-tag{align-self:flex-start;font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;background:var(--surface-2);color:var(--teal-dark);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
-.svc-tag.optional{background:var(--placeholder-bg);color:var(--placeholder);border-color:transparent}
-.svc-link{font-family:"Nunito";font-weight:800;color:var(--teal);text-decoration:none;font-size:.95rem;cursor:pointer;background:none;border:none;padding:0;text-align:left}
-.svc-link:hover{text-decoration:underline}
-
-/* Steps */
-.steps{display:grid;gap:18px}
-@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
-.step-num{width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-family:"Nunito";font-weight:900;font-size:1.15rem;margin-bottom:14px}
-.step h3{font-size:1.15rem;font-weight:800;margin-bottom:8px}
-.step p{color:var(--ink-soft);font-size:.96rem}
-
-/* Checklist */
-.check-panel{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
-.check-tabs{display:flex;flex-wrap:wrap;gap:8px;padding:20px 20px 0}
-.check-tab{font-family:"Nunito";font-weight:800;font-size:.93rem;border:2px solid var(--line);background:var(--surface);color:var(--ink-soft);border-radius:999px;padding:9px 17px;cursor:pointer}
-.check-tab[aria-selected="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
-.check-body{padding:22px 26px 28px}
-.check-list{list-style:none;margin:0;padding:0;display:grid;gap:11px}
-@media(min-width:700px){.check-list{grid-template-columns:1fr 1fr}}
-.check-list li{display:flex;gap:10px;font-weight:600}
-.check-list li svg{width:19px;height:19px;color:var(--teal);flex:none;margin-top:3px}
-.check-note{margin-top:18px;font-size:.9rem;color:var(--ink-soft)}
-
-/* Why */
-.why-grid{display:grid;gap:16px}
-@media(min-width:640px){.why-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:1000px){.why-grid{grid-template-columns:repeat(3,1fr)}}
-.why{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
-.why .icon{width:46px;height:46px;border-radius:14px;background:var(--mint);display:grid;place-items:center;color:var(--teal);margin-bottom:13px}
-.why .icon svg{width:24px;height:24px}
-.why h3{font-size:1.08rem;font-weight:800;margin-bottom:7px}
-.why p{color:var(--ink-soft);font-size:.95rem}
-
-/* Reviews */
-.reviews-band{background:var(--surface-2)}
-.review-top{display:grid;gap:22px;align-items:stretch;margin-bottom:24px}
-@media(min-width:880px){.review-top{grid-template-columns:340px 1fr}}
-.score-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;text-align:center;box-shadow:var(--shadow)}
-.score-card .score{font-family:"Nunito";font-weight:900;font-size:3.4rem;line-height:1;color:var(--teal-dark)}
-.score-card .stars{font-size:1.5rem;margin:8px 0}
-.score-card p{color:var(--ink-soft);font-weight:600;font-size:.95rem}
-.profile-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;justify-content:center}
-.review-cards{display:grid;gap:16px}
-@media(min-width:700px){.review-cards{grid-template-columns:repeat(3,1fr)}}
-.review{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
-.review .stars{font-size:.95rem}
-.review p{font-size:.98rem;flex:1}
-.review .who{font-weight:800;font-family:"Nunito";font-size:.93rem}
-.review .who span{display:block;font-family:"Nunito Sans";font-weight:600;color:var(--ink-soft);font-size:.84rem}
-.example-note{font-size:.85rem;color:var(--ink-soft);margin-top:16px;text-align:center}
-
-/* Owner */
-.owner-grid{display:grid;gap:30px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:32px;box-shadow:var(--shadow)}
-@media(min-width:860px){.owner-grid{grid-template-columns:280px 1fr;padding:42px}}
-.owner-photo{width:190px;height:190px;margin:0 auto;border-radius:50%;background:var(--mint);border:3px dashed var(--mint-2);display:grid;place-items:center;text-align:center;color:var(--teal-dark);font-family:"Nunito";font-weight:800;padding:20px;font-size:.92rem}
-.owner-grid h2{font-size:clamp(1.55rem,4vw,2.1rem);font-weight:900;margin-bottom:12px}
-.owner-grid p{color:var(--ink-soft);margin-bottom:12px}
-.owner-sig{font-family:"Nunito";font-weight:900;font-size:1.15rem;color:var(--teal-dark)}
-
-/* Area */
-.area-chips{display:flex;flex-wrap:wrap;gap:9px;margin:6px 0 20px}
-.area-chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-weight:700;font-size:.92rem;display:inline-flex;gap:7px;align-items:center}
-.area-chip svg{width:14px;height:14px;color:var(--teal)}
-.area-card{background:var(--mint);border-radius:22px;padding:28px}
-.area-card h3{font-size:1.25rem;font-weight:900;margin-bottom:8px}
-.area-card p{color:var(--ink-soft)}
-
-/* FAQ */
-.faq-list{max-width:820px;margin:0 auto;display:grid;gap:12px}
-.faq{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.faq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:14px;background:none;border:none;padding:19px 22px;font-family:"Nunito";font-weight:800;font-size:1.02rem;color:var(--ink);cursor:pointer;text-align:left}
-.faq button .chev{flex:none;color:var(--teal);transition:transform .2s}
-.faq.open button .chev{transform:rotate(180deg)}
-.faq .faq-a{display:none;padding:0 22px 20px;color:var(--ink-soft)}
-.faq.open .faq-a{display:block}
-
-/* Quote */
-.quote-band{background:linear-gradient(160deg,var(--teal-dark),var(--teal));color:#fff}
-@media(prefers-color-scheme:dark){.quote-band{background:linear-gradient(160deg,#0d2b27,#14453e)}}
-.quote-grid{display:grid;gap:34px}
-@media(min-width:920px){.quote-grid{grid-template-columns:1fr 1.05fr}}
-.quote-band h2{color:#fff;font-size:clamp(1.8rem,4.5vw,2.5rem);font-weight:900}
-.quote-band .lead{margin-top:13px;color:#d7f0ea;font-size:1.07rem;max-width:32em}
-.quote-points{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:13px}
-.quote-points li{display:flex;gap:11px;font-weight:700}
-.quote-points svg{width:20px;height:20px;flex:none;margin-top:2px;color:#8fe3d2}
-.quote-alt{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
-form.quote{background:var(--surface);color:var(--ink);border-radius:24px;padding:28px;box-shadow:var(--shadow-lg)}
-form.quote h3{font-size:1.3rem;font-weight:900;margin-bottom:4px}
-form.quote .sub{color:var(--ink-soft);font-size:.93rem;margin-bottom:18px}
-.f-grid{display:grid;gap:14px}
-@media(min-width:560px){.f-grid{grid-template-columns:1fr 1fr}.f-full{grid-column:1/-1}}
-label.f{display:block;font-family:"Nunito";font-weight:800;font-size:.88rem}
-label.f input,label.f select,label.f textarea{width:100%;margin-top:6px;font-family:"Nunito Sans";font-size:1rem;font-weight:600;color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:12px;padding:12px 13px}
-label.f input:focus,label.f select:focus,label.f textarea:focus{outline:none;border-color:var(--teal)}
-form.quote .btn{width:100%;margin-top:18px}
-.form-privacy{font-size:.82rem;color:var(--ink-soft);text-align:center;margin-top:11px}
-.form-success{display:none;background:var(--mint);border:2px solid var(--mint-2);border-radius:16px;padding:20px;margin-top:18px;text-align:center}
-.form-success.show{display:block}
-.form-success h4{font-size:1.1rem;margin-bottom:6px}
-.form-success p{color:var(--ink-soft);font-size:.94rem;margin-bottom:14px}
-
-/* Personalise guide */
-.guide{border:2px dashed var(--teal);border-radius:24px;background:var(--surface);padding:30px}
-.guide h2{font-size:1.5rem;font-weight:900;margin-bottom:8px}
-.guide>p{color:var(--ink-soft);max-width:44em}
-.guide ol{margin:18px 0 0;padding-left:22px;display:grid;gap:9px}
-@media(min-width:760px){.guide ol{grid-template-columns:1fr 1fr;column-gap:36px}}
-.guide li{font-weight:600}
-.guide code{background:var(--surface-2);border-radius:6px;padding:1px 6px;font-size:.88em}
-
-/* Footer */
-footer.site{background:#0a2e2a;color:#cfe8e2;padding:48px 0 34px}
-@media(prefers-color-scheme:dark){footer.site{background:#071715}}
-footer.site h3,footer.site h4{color:#fff}
-.foot-grid{display:grid;gap:28px}
-@media(min-width:820px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr}}
-footer.site a{color:#cfe8e2;text-decoration:none;font-weight:600}
-footer.site a:hover{color:#fff;text-decoration:underline}
-.foot-links{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
-footer.site p{color:#a9c6c0;font-size:.94rem}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:32px;padding-top:20px;font-size:.86rem;color:#8fb3ab;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between}
-
-/* Sticky CTA */
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(10,60,53,.12);display:grid;grid-template-columns:1fr 1fr 1.2fr;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
-.sticky-cta a{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:"Nunito";font-weight:900;font-size:.95rem;text-decoration:none;border-radius:12px;padding:12px 6px;margin:0 4px}
-.sticky-cta svg{width:18px;height:18px}
-.sticky-cta .sc-call{background:var(--surface-2);color:var(--teal-dark);border:2px solid var(--line)}
-.sticky-cta .sc-text{background:var(--mint);color:var(--teal-dark)}
-.sticky-cta .sc-quote{background:var(--teal);color:#fff}
-@media(max-width:819px){
-  .hero{padding-top:26px}
-  .hero h1{font-size:1.95rem;margin:14px 0 10px}
-  .hero-sub{font-size:1.02rem}
-  .rating-pill{margin:13px 0 2px}
-  .hero-ctas{margin:15px 0 12px}
-  .hero-ctas .btn{padding:12px 20px;font-size:.95rem}
-  .local-badge{font-size:.8rem;padding:6px 12px}
-}
-@media(min-width:820px){
-  .sticky-cta{left:auto;right:22px;bottom:22px;border:1px solid var(--line);border-radius:999px;padding:8px;grid-template-columns:auto auto auto;box-shadow:var(--shadow-lg)}
-  .sticky-cta a{border-radius:999px;padding:12px 20px}
-}
-</style>
+  </script>
 </head>
 <body>
 
-<header class="site">
-  <div class="wrap header-in">
-    <a class="logo" href="#top" aria-label="Home">
-      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></span>
-      <span><span class="logo-name" data-bind="businessName">Miss Molly's Cleaning LLC</span><br /><span class="logo-sub">House Cleaning &amp; Janitorial • <span data-bind="cityState">Bozeman, MT</span></span></span>
-    </a>
-    <nav class="main" aria-label="Main">
-      <a href="#services">Services</a><a href="#checklist">Checklist</a><a href="#reviews">Reviews</a><a href="#about">About</a><a href="#area">Service Area</a><a href="#faq">FAQ</a>
-    </nav>
-    <div class="header-cta">
-      <a class="btn btn-call btn-sm header-phone" data-call href="tel:+14065796115"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg><span data-bind="phone">(406) 579-6115</span></a>
-      <a class="btn btn-primary btn-sm" href="#quote">Free Quote</a>
+  <!-- Screen Reader Skip -->
+  <a href="#booking" class="skip-link">Skip straight to booking</a>
+
+  <!-- Top Announcement / Vibe Strip -->
+  <div class="top-announcement-strip">
+    <div class="container announcement-inner">
+      <span>✨ <strong>Real talk:</strong> Life gets messy. I've got rubber gloves and zero judgment.</span>
+      <span class="announcement-sep">•</span>
+      <span>No time wasters &bull; Straightforward $70/hr pricing &bull; Call or text <a href="tel:+14065796115" style="color:#FDA4AF;font-weight:800;text-decoration:underline">(406) 579-6115</a></span>
     </div>
   </div>
-</header>
 
-<main id="top">
-
-<!-- HERO -->
-<div class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="local-badge"><span class="dot"></span> Locally owned in <span class="ph" data-bind="cityState">Bozeman, MT</span> • Serving families since <span class="ph" data-bind="founded">2025</span></span>
-      <h1>A cleaner home.<br />A calmer week.<br /><span class="accent">A neighbour you can trust.</span></h1>
-      <p class="hero-sub"><strong data-bind="businessName">Miss Molly's Cleaning LLC</strong> is a small, local cleaning team — not a franchise call centre. We clean homes and workplaces across <span class="ph" data-bind="serviceArea">Bozeman & surrounding areas</span>, and the owner still answers the phone.</p>
-      <div class="rating-pill">
-        <span>BBB Accredited</span>
-        <span class="sep">•</span>
-        <span>BBB <span class="ph" data-bind="bbbRating">A-</span> rated</span>
-        <span class="sep">•</span>
-        <span>Locally owned in <span class="ph" data-bind="cityState">Bozeman, MT</span></span>
-      </div>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#quote">Get a Free Quote</a>
-        <a class="btn btn-call" data-call href="tel:+14065796115"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg> Call <span data-bind="phone">(406) 579-6115</span></a>
-        <a class="btn btn-text" data-text href="sms:+14065796115"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.8-.9L3 20l1.1-5.3a8.2 8.2 0 0 1-1-4A8.4 8.4 0 0 1 11.5 2h.9A8.4 8.4 0 0 1 21 11.5z"/></svg> Text Us</a>
-      </div>
-      <p class="hero-note">Call or text — whichever is easier. Every number reaches a real mobile, so a text gets a real reply.</p>
-      <div class="trust-chips">
-        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Licensed &amp; insured</span>
-        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Background-checked team</span>
-        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> We bring all supplies</span>
-        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Eco-friendly options</span>
-        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> No contracts</span>
-      </div>
-    </div>
-    <div class="hero-media">
-      <img src="hero.jpg" alt="Bright, freshly cleaned living room with gleaming floors and sunlight through the windows" />
-      <div class="float-card fc-text">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.8-.9L3 20l1.1-5.3a8.2 8.2 0 0 1-1-4A8.4 8.4 0 0 1 11.5 2h.9A8.4 8.4 0 0 1 21 11.5z"/></svg></span>
-        <span><span class="big" style="font-size:1rem">Questions? Just text us</span><br /><span class="small">Fast, friendly replies — no phone tag</span></span>
-      </div>
-      <div class="float-card fc-years">
-        <div class="big"><span class="ph" data-bind="years">1+</span> years</div>
-        <div class="small">serving local homes &amp; businesses</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- TRUST BAR -->
-<div class="trustbar">
-  <div class="wrap trustbar-in">
-    <div class="trust-item"><div class="v">BBB <span class="ph" data-bind="bbbRating">A-</span></div><div class="l">Accredited Business</div></div>
-    <div class="trust-item"><div class="v"><span class="ph" data-bind="years">1+</span> Years</div><div class="l">Established &amp; local — since <span data-bind="founded">2025</span></div></div>
-    <div class="trust-item"><div class="v"><span class="ph" data-bind="cityState">Bozeman, MT</span></div><div class="l">Locally owned &amp; operated</div></div>
-    <div class="trust-item"><div class="v">40-mile</div><div class="l">Service radius around Bozeman</div></div>
-  </div>
-</div>
-
-<!-- TWO TRACKS -->
-<section id="tracks">
-  <div class="wrap">
-    <div class="section-head center">
-      <span class="kicker">Homes &amp; Businesses</span>
-      <h2>One trusted team, two kinds of clean</h2>
-      <p>Whether it's the house you live in or the workplace you run, you get the same local team, the same care, and the same owner on the phone.</p>
-    </div>
-    <div class="tracks">
-      <article class="track">
-        <img src="standard.jpg" alt="Calm, spotless living room after a residential house clean" />
-        <div class="track-body">
-          <h3>For Your Home</h3>
-          <p>Come home to a house that feels reset — kitchens and bathrooms properly scrubbed, floors gleaming, and the little details handled.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Standard &amp; recurring house cleaning</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Deep cleans &amp; spring cleans</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Move-in / move-out cleans</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Weekly, every-2-weeks or monthly visits</li>
-          </ul>
-          <button class="btn btn-primary" data-quote-service="Standard House Clean">Get a Home Cleaning Quote</button>
+  <!-- ========================================================================= -->
+  <!-- 1. HEADER & NAVIGATION -->
+  <!-- ========================================================================= -->
+  <header class="molly-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="molly-brand" aria-label="Miss Molly's Cleaning LLC Home">
+        <span class="brand-sparkle" aria-hidden="true">🧹</span>
+        <div class="brand-text-group">
+          <span class="brand-name">Miss Molly's</span>
+          <span class="brand-tag">Cleaning LLC • Bozeman, MT</span>
         </div>
-      </article>
-      <article class="track">
-        <img src="commercial.jpg" alt="Cleaning team in green aprons cleaning a bright modern office" />
-        <div class="track-body">
-          <h3>For Your Business</h3>
-          <p>A clean workplace your staff and customers notice — offices, clinics, churches, shops and rental turnovers, on a schedule that suits you.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Office &amp; commercial cleaning</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Full janitorial service — restrooms, trash, floors</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Daytime or after-hours visits</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Flexible schedules, no long contracts</li>
-          </ul>
-          <button class="btn btn-primary" data-quote-service="Office / Commercial Cleaning">Get a Business Cleaning Quote</button>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </a>
 
-<!-- SERVICES -->
-<section id="services" style="padding-top:6px">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">What We Clean</span>
-      <h2>Services for every home &amp; workplace</h2>
-      <p>Every job starts with a free, no-pressure quote — we don't publish fixed prices because every home and building is different. Tell us about yours and we'll price it fairly.</p>
-    </div>
-    <div class="svc-grid">
-      <article class="svc">
-        <img src="standard.jpg" alt="Tidy living room after a standard house clean" />
-        <div class="svc-body"><span class="svc-tag">Most Popular</span><h3>Standard House Clean</h3><p>Our regular top-to-bottom clean: kitchen, bathrooms, bedrooms and living areas dusted, wiped, vacuumed and mopped.</p><button class="svc-link" data-quote-service="Standard House Clean">Get a quote →</button></div>
-      </article>
-      <article class="svc">
-        <img src="deep.jpg" alt="Cleaner in yellow gloves deep-cleaning a white bathtub" />
-        <div class="svc-body"><span class="svc-tag">Top to Bottom</span><h3>Deep Clean</h3><p>The reset button: inside appliances, baseboards, grout, vents and all the built-up corners a regular clean can't reach.</p><button class="svc-link" data-quote-service="Deep Clean">Get a quote →</button></div>
-      </article>
-      <article class="svc">
-        <img src="move.jpg" alt="Empty home with moving boxes, vacuum and a move-out cleaning checklist" />
-        <div class="svc-body"><span class="svc-tag">Moving?</span><h3>Move-In / Move-Out</h3><p>Empty-home cleans that help renters protect their deposit and sellers hand over keys with confidence.</p><button class="svc-link" data-quote-service="Move-In / Move-Out Clean">Get a quote →</button></div>
-      </article>
-      <article class="svc">
-        <img src="hero.jpg" alt="Sunlit, freshly cleaned home ready for a recurring visit" />
-        <div class="svc-body"><span class="svc-tag">Set &amp; Forget</span><h3>Recurring Clean</h3><p>Weekly, every-2-weeks or monthly visits from the same familiar team. Easy to reschedule by text — life happens.</p><button class="svc-link" data-quote-service="Recurring Clean">Get a quote →</button></div>
-      </article>
-      <article class="svc">
-        <img src="commercial.jpg" alt="Team cleaning desks in a bright office" />
-        <div class="svc-body"><span class="svc-tag">Business</span><h3>Office / Commercial</h3><p>Offices, clinics, retail, churches and showrooms — desks, glass, restrooms, break rooms and floors, done right.</p><button class="svc-link" data-quote-service="Office / Commercial Cleaning">Get a quote →</button></div>
-      </article>
-      <article class="svc">
-        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4M9 10h.01M15 10h.01M12 13h.01"/></svg></div>
-        <div class="svc-body"><span class="svc-tag">Business</span><h3>Janitorial Service</h3><p>Ongoing janitorial care on your schedule: restroom sanitising, trash &amp; recycling, floor care and supply restocking.</p><button class="svc-link" data-quote-service="Janitorial Service">Get a quote →</button></div>
-      </article>
-      
-      <!-- OPTIONAL MODULE: hide this card for leads that don't do post-construction work -->
-      <article class="svc" data-optional="construction">
-        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5a4 4 0 0 0-5.6 5L3 17.4V21h3.6l5.9-5.9a4 4 0 0 0 5-5.6l-2.8 2.8-2.2-.7-.7-2.2z"/></svg></div>
-        <div class="svc-body"><span class="svc-tag optional">Optional — hide per lead</span><h3>Post-Construction</h3><p>Dust, debris and fine powder cleared after remodels and new builds, so the finished work actually looks finished.</p><button class="svc-link" data-quote-service="Post-Construction Clean">Get a quote →</button></div>
-      </article>
-    </div>
-  </div>
-</section>
+      <!-- Desktop Nav -->
+      <nav class="molly-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about">Meet Molly</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#commercial">Commercial &amp; Cafes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
 
-<!-- HOW IT WORKS -->
-<section style="padding-top:6px">
-  <div class="wrap">
-    <div class="section-head center"><span class="kicker">Simple From Start to Sparkle</span><h2>Booking takes about two minutes</h2></div>
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><h3>Call, text or send the form</h3><p>Reach us however suits you — call <span class="ph" data-bind="phone">(406) 579-6115</span>, send a text, or use the short quote form below. The owner replies personally.</p></div>
-      <div class="step"><div class="step-num">2</div><h3>Get a free, honest quote</h3><p>Tell us the size of the place, what you need, and how often. We'll give you a clear quote — no pressure, no obligation, no surprise fees later.</p></div>
-      <div class="step"><div class="step-num">3</div><h3>We clean, you relax</h3><p>We arrive on time with all supplies, work through our checklist, and text you when it's done. Recurring visits run themselves from there.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CHECKLIST -->
-<section id="checklist" style="padding-top:6px">
-  <div class="wrap">
-    <div class="section-head"><span class="kicker">Our Checklist</span><h2>What a proper clean actually covers</h2><p>Tap a room to see the standard. Deep cleans go further — just ask and we'll walk you through it.</p></div>
-    <div class="check-panel">
-      <div class="check-tabs" role="tablist" aria-label="Cleaning checklist by room">
-        <button class="check-tab" role="tab" aria-selected="true" data-tab="kitchen">Kitchen</button>
-        <button class="check-tab" role="tab" aria-selected="false" data-tab="bath">Bathrooms</button>
-        <button class="check-tab" role="tab" aria-selected="false" data-tab="bed">Bedrooms &amp; Living</button>
-        <button class="check-tab" role="tab" aria-selected="false" data-tab="office">Office &amp; Janitorial</button>
+      <!-- Header CTAs -->
+      <div class="header-cta-group">
+        <a href="tel:+14065796115" class="btn btn-outline-pink nav-price-btn">(406) 579-6115</a>
+        <a href="#booking" class="btn btn-pink-pop">Let's Get You Booked!</a>
       </div>
-      <div class="check-body">
-        <ul class="check-list" id="checkList"></ul>
-        <p class="check-note">Something specific on your list — a fridge, an oven, inside windows, laundry? Add it in the quote form and we'll include it.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- WHY -->
-<section style="padding-top:6px">
-  <div class="wrap">
-    <div class="section-head"><span class="kicker">Why Neighbours Choose Us</span><h2>Local, personal, and careful with your home</h2></div>
-    <div class="why-grid">
-      <div class="why"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V6l8-3 8 3z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Trusted &amp; accountable</h3><p>BBB Accredited with a <span class="ph" data-bind="bbbRating">A-</span> rating, licensed and insured, with a background-checked team. If something's not right, we come back and make it right.</p></div>
-      <div class="why"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></div><h3>The owner answers</h3><p>No call centre, no scripts. When you call or text <span class="ph" data-bind="phone">(406) 579-6115</span>, you reach <span class="ph" data-bind="ownerName">Molly Cornes</span> and the local team directly.</p></div>
-      <div class="why"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4 0-7-2.7-7-7 0-5 5-9 7-11 2 2 7 6 7 11 0 4.3-3 7-7 7z"/><path d="M12 21V11M12 14c-2 0-3.5-1.3-4-3 2 0 3.5 1 4 3zM12 12c0-2 1.3-3.5 3-4 0 2-1 3.5-3 4z"/></svg></div><h3>Eco-friendly options</h3><p>Kids, pets or allergies in the house? Ask for our eco-friendly products — effective cleaning that's gentler on your family and theirs.</p></div>
-      <div class="why"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div><h3>Flexible, no contracts</h3><p>Weekly, fortnightly or monthly — pause, skip or reschedule by text with a little notice. You're with us because you want to be, not because you signed something.</p></div>
-      <div class="why"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></div><h3>Supplies included</h3><p>We bring everything — professional products, vacuum, mops and cloths. Prefer we use yours? Just say so and we happily will.</p></div>
-      <div class="why"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Here for the long haul</h3><p><span class="ph" data-bind="years">1+</span> years serving this community means our reputation is our business. Most new clients come from a neighbour's recommendation.</p></div>
+      <!-- Mobile Menu Button -->
+      <button type="button" class="mobile-toggle-btn" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- REVIEWS -->
-<section id="reviews" class="reviews-band">
-  <div class="wrap">
-    <div class="section-head center"><span class="kicker">Word of Mouth</span><h2>Loved locally, one home at a time</h2><p>We're a small, new local business — BBB Accredited with an A- rating in our first year. Here's the kind of feedback we work for on every clean.</p></div>
-    <div class="review-top">
-      <div class="score-card">
-        <div class="score">A-</div>
-        <div style="font-weight:800;color:var(--teal-dark)">BBB Accredited Rating</div>
-        <p>House cleaning, janitorial &amp; post-construction<br />Locally owned in Bozeman — since <span class="ph" data-bind="founded">2025</span></p>
-        <div class="profile-links">
-          <!-- Replace # with the lead's real profile links -->
-          <a class="btn btn-ghost btn-sm" href="#" aria-label="Read reviews on Google (placeholder link)">Google Reviews</a>
-          <a class="btn btn-ghost btn-sm" href="#" aria-label="Visit Facebook page (placeholder link)">Facebook</a>
-          <a class="btn btn-ghost btn-sm" href="#" aria-label="Visit BBB profile (placeholder link)">BBB Profile</a>
-        </div>
-      </div>
-      <div class="review-cards">
-        <article class="review"><span class="stars" aria-hidden="true">★★★★★</span><p>“They've cleaned our home every two weeks for over a year and it still feels like the first deep clean, every time. Reliable, kind, and they text before they arrive.”</p><div class="who">Sarah<span>Recurring home clean • Bozeman</span></div></article>
-        <article class="review"><span class="stars" aria-hidden="true">★★★★★</span><p>“Booked a move-out clean on short notice and got my full deposit back. The landlord actually asked who cleaned it. Worth every penny.”</p><div class="who">James<span>Move-out clean • Belgrade</span></div></article>
-        <article class="review"><span class="stars" aria-hidden="true">★★★★★</span><p>“They clean our office twice a week after hours. Restrooms, floors, desks — always done properly, and we never have to chase anything.”</p><div class="who">Emily<span>Office / janitorial • Bozeman</span></div></article>
-      </div>
-    </div>
-    <p class="example-note">Example reviews shown on this demo site.</p>
-  </div>
-</section>
-
-<!-- OPTIONAL OWNER SECTION: delete this whole <section> cleanly if the owner's name/photo aren't known -->
-<section id="about">
-  <div class="wrap">
-    <div class="owner-grid">
-      <div>
-        <div class="owner-photo" style="padding:0;overflow:hidden"><img src="standard.jpg" alt="The Miss Molly's Cleaning team at work in a Bozeman home" style="width:100%;height:100%;object-fit:cover;border-radius:50%" /></div>
-      </div>
-      <div>
-        <span class="kicker">Meet the Owner</span>
-        <h2>Hi, I'm <span class="ph" data-bind="ownerName">Molly Cornes</span> — I run <span data-bind="businessName">Miss Molly's Cleaning LLC</span> personally.</h2>
-        <p>I started <strong data-bind="businessName">Miss Molly's Cleaning LLC</strong> in <span class="ph" data-bind="founded">2025</span> here in <span class="ph" data-bind="cityState">Bozeman, MT</span>, cleaning homes myself. <span class="ph" data-bind="years">1+</span> in, we're still deliberately small: a local team I know and trust, cleaning for neighbours I bump into at the grocery store.</p>
-        <p>That's why when you call or text, you get me — not a booking system. If you'd like a quote, a one-off deep clean, or just advice on keeping on top of things, I'm happy to help.</p>
-        <p class="owner-sig">— <span class="ph" data-bind="ownerName">Molly Cornes</span>, Owner</p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
-          <a class="btn btn-primary" data-call href="tel:+14065796115">Call <span data-bind="phone">(406) 579-6115</span></a>
-          <a class="btn btn-ghost" data-text href="sms:+14065796115">Text Me Directly</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE AREA -->
-<section id="area" style="padding-top:6px">
-  <div class="wrap">
-    <div class="section-head"><span class="kicker">Where We Work</span><h2>Proudly serving <span class="ph" data-bind="serviceArea">Bozeman & surrounding areas</span></h2><p>Based in <span class="ph" data-bind="cityState">Bozeman, MT</span>, we serve <span>10 towns and communities</span> within about a <span>40-mile</span> radius, across <span>Gallatin, Park and Madison counties</span>:</p></div>
-    <div class="area-chips" aria-label="Towns served">
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Bozeman</span>
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Belgrade</span>
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Four Corners</span>
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Manhattan</span>
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Gallatin Gateway</span>
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Amsterdam</span>
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Churchill</span>
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Three Forks</span>
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Livingston</span>
-      <span class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Big Sky</span>
-    </div>
-    <div class="area-card"><h3>Don't see your town?</h3><p>Text us at <a data-text href="sms:+14065796115" style="font-weight:800"><span class="ph" data-bind="phone">(406) 579-6115</span></a> — for recurring cleans we often travel a little further, and if we genuinely can't help, we'll happily point you to someone local who can.</p></div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" style="padding-top:6px">
-  <div class="wrap">
-    <div class="section-head center"><span class="kicker">Good Questions</span><h2>Before you book</h2></div>
-    <div class="faq-list">
-      <div class="faq"><button aria-expanded="false">How much does it cost?<span class="chev">▾</span></button><div class="faq-a"><p>Every home and workplace is different, so we quote individually rather than publishing fixed prices. Your free quote is based on the size of the place, its current condition, and how often you'd like us. No obligation — and the price we quote is the price you pay.</p></div></div>
-      <div class="faq"><button aria-expanded="false">Do you bring your own supplies and equipment?<span class="chev">▾</span></button><div class="faq-a"><p>Yes — professional products, vacuum, mops and cloths are all included. Eco-friendly products are available on request, and if you'd prefer we use your products, just let us know.</p></div></div>
-      <div class="faq"><button aria-expanded="false">Do I need to be home during the clean?<span class="chev">▾</span></button><div class="faq-a"><p>Not at all. Most recurring clients give us a key, code or garage access. Our team is background-checked, licensed and insured, and we'll text you when we arrive and when we're done.</p></div></div>
-      <div class="faq"><button aria-expanded="false">What about pets?<span class="chev">▾</span></button><div class="faq-a"><p>We love them — and we're used to working around them. Tell us their names and any instructions (shut doors, no-go rooms) in your quote request and we'll take care of the rest.</p></div></div>
-      <div class="faq"><button aria-expanded="false">Can I skip or reschedule a visit?<span class="chev">▾</span></button><div class="faq-a"><p>Of course. Just call or text us with a little notice and we'll move your clean — no contracts and no cancellation games.</p></div></div>
-      <div class="faq"><button aria-expanded="false">Do you clean offices after hours?<span class="chev">▾</span></button><div class="faq-a"><p>Yes. Most commercial and janitorial clients choose evening or early-morning visits so the workplace is spotless before the day starts. Daytime cleaning is available too.</p></div></div>
-      <div class="faq"><button aria-expanded="false">What if I'm not happy with something?<span class="chev">▾</span></button><div class="faq-a"><p>Tell us within 24 hours and we'll come back and re-clean that area free. After <span class="ph" data-bind="years">1+</span> years, our reputation in this community matters more to us than any single job.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- QUOTE -->
-<section id="quote" class="quote-band">
-  <div class="wrap quote-grid">
-    <div>
-      <h2>Get your free quote</h2>
-      <p class="lead">Thirty seconds on the form, or just call or text. We'll reply personally — usually the same day — with a clear, no-pressure quote.</p>
-      <ul class="quote-points">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Free &amp; no obligation</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Homes, offices &amp; janitorial</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> One-off or recurring — your choice</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> The owner replies, not a call centre</li>
+  <!-- Mobile Dropdown Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav" hidden>
+    <div class="container">
+      <ul class="mobile-links">
+        <li><a href="#about" class="mob-link">Meet Molly &amp; Her Philosophy</a></li>
+        <li><a href="#services" class="mob-link">House &amp; Laundry Services</a></li>
+        <li><a href="#pricing" class="mob-link">Straightforward Pricing ($70/hr)</a></li>
+        <li><a href="#commercial" class="mob-link">Coffee Shops &amp; Commercial</a></li>
+        <li><a href="#faq" class="mob-link">Frequently Asked Questions</a></li>
+        <li><a href="#booking" class="mob-link mob-highlight">Book a Cleaning Now &rarr;</a></li>
       </ul>
-      <div class="quote-alt">
-        <a class="btn" style="background:#fff;color:#0a5c53" data-call href="tel:+14065796115">Call <span data-bind="phone">(406) 579-6115</span></a>
-        <a class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.55)" data-text href="sms:+14065796115">Text Us Instead</a>
-      </div>
-      <p style="margin-top:18px;color:#bfe6db;font-size:.9rem">Open <span class="ph">Mon–Sat, 8am–6pm</span> • Based in <span class="ph" data-bind="cityState">Bozeman, MT</span></p>
-    </div>
-    <form class="quote" id="quoteForm" novalidate>
-      <h3>Request a free quote</h3>
-      <p class="sub">Five quick fields. We'll call or text you back — whichever you prefer.</p>
-      <div class="f-grid">
-        <label class="f">Your name<input type="text" name="name" id="fName" autocomplete="name" placeholder="e.g. Sarah Johnson" required /></label>
-        <label class="f">Phone (mobile is fine)<input type="tel" name="phone" id="fPhone" autocomplete="tel" placeholder="(555) 000-0000" required /></label>
-        <label class="f">City / Town<input type="text" name="city" id="fCity" autocomplete="address-level2" placeholder="Your town" required /></label>
-        <label class="f">Service type
-          <select name="service" id="fService" required>
-            <option value="">Choose a service…</option>
-            <option>Standard House Clean</option><option>Deep Clean</option><option>Move-In / Move-Out Clean</option><option>Recurring Clean</option><option>Office / Commercial Cleaning</option><option>Janitorial Service</option><option>Post-Construction Clean</option><option>Not sure — advise me</option>
-          </select>
-        </label>
-        <label class="f f-full">How often?
-          <select name="frequency" id="fFreq" required>
-            <option value="">Choose frequency…</option>
-            <option>One-time clean</option><option>Weekly</option><option>Every 2 weeks</option><option>Monthly</option><option>Not sure yet</option>
-          </select>
-        </label>
-        <label class="f f-full">Anything we should know? <span style="font-weight:600;color:var(--ink-soft)">(optional)</span><textarea name="notes" id="fNotes" rows="3" placeholder="Home size, pets, preferred days, office hours…"></textarea></label>
-      </div>
-      <p id="formError" style="display:none;color:#b91c1c;font-weight:700;font-size:.92rem;margin-top:12px">Please fill in your name, phone, city, service and frequency so we can quote accurately.</p>
-      <button type="submit" class="btn btn-primary">Request My Free Quote</button>
-      <p class="form-privacy">No spam, no selling your details — just a reply from <span data-bind="businessName">Miss Molly's Cleaning LLC</span>.</p>
-      <div class="form-success" id="formSuccess">
-        <h4>Thanks — we've got your details ✓</h4>
-        <p>Tap below to text this request straight to <strong data-bind="businessName">Miss Molly's Cleaning LLC</strong> at <span data-bind="phone">(406) 579-6115</span> for the fastest reply, or just wait for our call/text back.</p>
-        <a class="btn btn-primary" id="smsSendBtn" data-text href="sms:+14065796115">Text This Request Now</a>
-      </div>
-    </form>
-  </div>
-</section>
-
-
-
-</main>
-
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <h3 style="font-size:1.25rem;font-weight:900" data-bind="businessName">Miss Molly's Cleaning LLC</h3>
-        <p style="margin-top:10px">Locally owned house cleaning &amp; janitorial in <span class="ph" data-bind="cityState">Bozeman, MT</span>. Serving <span class="ph" data-bind="serviceArea">Bozeman & surrounding areas</span> since <span class="ph" data-bind="founded">2025</span>.</p>
-        <p style="margin-top:12px">BBB Accredited • <span class="ph" data-bind="bbbRating">A-</span> rated &nbsp;•&nbsp; Locally owned in <span class="ph" data-bind="cityState">Bozeman, MT</span></p>
-      </div>
-      <div>
-        <h4 style="font-weight:800">Contact</h4>
-        <ul class="foot-links">
-          <li><a data-call href="tel:+14065796115">Call: <span data-bind="phone">(406) 579-6115</span></a></li>
-          <li><a data-text href="sms:+14065796115">Text: <span data-bind="phone">(406) 579-6115</span></a></li>
-          <li><a href="#quote">Get a free quote</a></li>
-          <li><span style="color:#a9c6c0">Hours: <span class="ph">Mon–Sat, 8am–6pm</span></span></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="font-weight:800">Find us &amp; services</h4>
-        <ul class="foot-links">
-          <li><a href="#">Google Profile →</a></li>
-          <li><a href="#">Facebook Page →</a></li>
-          <li><a href="#">BBB Profile →</a></li>
-          <li><a href="#services">House Cleaning</a> · <a href="#services">Janitorial</a></li>
-        </ul>
+      <div class="mobile-drawer-footer">
+        <p class="drawer-note">Got questions? Text or call Molly directly:</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="tel:+14065796115" class="btn btn-call-molly btn-sm">Call (406) 579-6115</a>
+          <a href="sms:+14065796115" class="btn btn-text-molly btn-sm">Text Molly</a>
+        </div>
       </div>
     </div>
-    <div class="foot-bottom"><span>© <span id="year">2026</span> <span data-bind="businessName">Miss Molly's Cleaning LLC</span>. All rights reserved.</span><span>Licensed &amp; insured • <span data-bind="cityState">Bozeman, MT</span></span></div>
   </div>
-</footer>
 
-<!-- STICKY CALL / TEXT / QUOTE -->
-<div class="sticky-cta" role="navigation" aria-label="Quick contact">
-  <a class="sc-call" data-call href="tel:+14065796115"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg> Call</a>
-  <a class="sc-text" data-text href="sms:+14065796115"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.8-.9L3 20l1.1-5.3a8.2 8.2 0 0 1-1-4A8.4 8.4 0 0 1 11.5 2h.9A8.4 8.4 0 0 1 21 11.5z"/></svg> Text Us</a>
-  <a class="sc-quote" href="#quote">Free Quote</a>
-</div>
+  <main id="main-content">
 
-<script>
-/* ============================================================
-   PERSONALISE HERE — edit this one block and the whole page
-   updates: header, hero, trust bar, reviews, owner, footer,
-   plus every Call/Text link.
-   ============================================================ */
-var SITE = {
-  businessName: "Miss Molly's Cleaning LLC",
-  phone: "(406) 579-6115",          /* display */
-  phoneHref: "+14065796115",        /* tel:/sms: number */
-  cityState: "Bozeman, MT",
-  serviceArea: "Bozeman & surrounding areas",
-  rating: "A-",
-  reviewCount: "",
-  bbbRating: "A-",
-  years: "1+",
-  founded: "2025",
-  ownerName: "Molly Cornes"
-};
+    <!-- ========================================================================= -->
+    <!-- 2. PERSONAL, DOWN-HOME HERO SECTION -->
+    <!-- ========================================================================= -->
+    <section class="molly-hero">
+      <div class="container hero-layout">
+        
+        <div class="hero-text-col">
+          <div class="handwritten-badge">
+            <span class="badge-icon">💖</span>
+            <span>Down-home &bull; Independent &bull; BBB Accredited (A-)</span>
+          </div>
 
-/* Apply SITE values to every [data-bind] placeholder */
-(function(){
-  Object.keys(SITE).forEach(function(key){
-    document.querySelectorAll('[data-bind="'+key+'"]').forEach(function(el){ el.textContent = SITE[key]; });
-  });
-  document.querySelectorAll('a[data-call]').forEach(function(a){ a.setAttribute('href','tel:'+SITE.phoneHref); });
-  document.querySelectorAll('a[data-text]').forEach(function(a){ if(!a.id) a.setAttribute('href','sms:'+SITE.phoneHref); });
-  var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
-})();
+          <!-- Hero Headline -->
+          <h1 class="hero-heading">
+            Hey! Nice to meet you.<br>
+            <span class="heading-highlight">Need a clean?</span> You're in the right place.
+          </h1>
 
-/* Checklist tabs */
-var CHECKLISTS = {
-  kitchen:["Counters, backsplash & sink scrubbed and sanitised","Stovetop, hob and splashback degreased","Appliance exteriors wiped — fridge, oven, microwave","Microwave cleaned inside","Cabinet fronts spot-cleaned and handles wiped","Floors vacuumed and mopped","Trash emptied and bin wiped","Small appliances and items dusted and tidied"],
-  bath:["Toilet scrubbed and sanitised inside and out","Shower, tub and tiles scrubbed — soap scum removed","Mirrors polished streak-free","Sink, taps and fixtures descaled and shined","Counters and cabinet fronts wiped","Floors vacuumed and hand-mopped in corners","Trash emptied","Towels straightened / replaced if left out"],
-  bed:["All surfaces dusted — shelves, frames, lamps, skirting","Beds made (fresh linens if left out)","Mirrors and glass polished","Floors vacuumed incl. under-bed edges where reachable","Ceiling fans and vents dusted","Living areas: cushions plumped, remotes/items tidied","Electronics and TV screens dusted","Trash and recycling emptied throughout"],
-  office:["Desks and work surfaces wiped and sanitised","Restrooms fully scrubbed, sanitised and restocked","Trash & recycling emptied, liners replaced","Kitchen / break-room counters, sink and appliances wiped","Glass doors and partitions spot-cleaned","Floors vacuumed and hard floors mopped","High-touch points disinfected — handles, switches, rails","Entry and reception areas presented ready for visitors"]
-};
-var checkList=document.getElementById('checkList');
-var checkSVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
-function renderChecklist(key){
-  checkList.innerHTML=CHECKLISTS[key].map(function(item){return '<li>'+checkSVG+'<span>'+item+'</span></li>';}).join('');
-}
-document.querySelectorAll('.check-tab').forEach(function(tab){
-  tab.addEventListener('click',function(){
-    document.querySelectorAll('.check-tab').forEach(function(t){t.setAttribute('aria-selected','false');});
-    tab.setAttribute('aria-selected','true');
-    renderChecklist(tab.getAttribute('data-tab'));
-  });
-});
-renderChecklist('kitchen');
+          <!-- Supporting Text -->
+          <p class="hero-lead">
+            I clean homes, handle laundry, and take on bigger jobs too. No long sales pitches. No funny business. Just good, honest cleaning and straightforward rates. Let's get you booked!
+          </p>
 
-/* FAQ accordion */
-document.querySelectorAll('.faq button').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    var item=btn.parentElement, open=item.classList.contains('open');
-    document.querySelectorAll('.faq').forEach(function(f){f.classList.remove('open'); f.querySelector('button').setAttribute('aria-expanded','false');});
-    if(!open){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
-  });
-});
+          <!-- Core Value Badges -->
+          <div class="hero-values-strip">
+            <div class="value-item">
+              <span class="val-check">✓</span>
+              <span><strong>No meet-and-greet time wasters</strong></span>
+            </div>
+            <div class="value-item">
+              <span class="val-check">✓</span>
+              <span><strong>$70/hr standard • $75/hr w/ laundry</strong></span>
+            </div>
+            <div class="value-item">
+              <span class="val-check">✓</span>
+              <span><strong>Zero judgment — life happens</strong></span>
+            </div>
+          </div>
 
-/* Service / track buttons -> pre-fill the quote form */
-function setServiceAndScroll(service){
-  var sel=document.getElementById('fService');
-  for(var i=0;i<sel.options.length;i++){ if(sel.options[i].text===service){ sel.selectedIndex=i; break; } }
-  document.getElementById('quote').scrollIntoView({behavior:'smooth'});
-  setTimeout(function(){ document.getElementById('fName').focus({preventScroll:true}); },600);
-}
-document.querySelectorAll('[data-quote-service]').forEach(function(btn){
-  btn.addEventListener('click',function(){ setServiceAndScroll(btn.getAttribute('data-quote-service')); });
-});
+          <!-- Hero CTAs -->
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-pink-pop btn-hero">
+              <span>Book a Cleaning</span>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#pricing" class="btn btn-warm-cream btn-hero">
+              <span>See Hourly Rates</span>
+            </a>
+          </div>
 
-/* Quote form -> build an SMS the visitor can send (the lead's number is SMS-capable) */
-document.getElementById('quoteForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  var name=document.getElementById('fName').value.trim(),
-      phone=document.getElementById('fPhone').value.trim(),
-      city=document.getElementById('fCity').value.trim(),
-      service=document.getElementById('fService').value,
-      freq=document.getElementById('fFreq').value,
-      notes=document.getElementById('fNotes').value.trim(),
-      err=document.getElementById('formError');
-  if(!name||!phone||!city||!service||!freq){ err.style.display='block'; return; }
-  err.style.display='none';
-  var body='Hi '+SITE.businessName+'! I would like a free quote.\nName: '+name+'\nPhone: '+phone+'\nCity: '+city+'\nService: '+service+'\nFrequency: '+freq+(notes?'\nNotes: '+notes:'');
-  var btn=document.getElementById('smsSendBtn');
-  btn.setAttribute('href','sms:'+SITE.phoneHref+'?&body='+encodeURIComponent(body));
-  var success=document.getElementById('formSuccess');
-  success.classList.add('show');
-  success.scrollIntoView({behavior:'smooth',block:'center'});
-});
-</script>
+          <p class="hero-subnote">
+            <span class="sassy-handwriting">P.S. Yes, I do laundry too. Your couch will thank you.</span>
+          </p>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="hero-card-frame">
+            <div class="polaroid-wrapper">
+              <img src="deep.jpg" alt="Friendly cleaner in yellow gloves smiling while scrubbing a sparkling clean home tub" class="polaroid-img" width="560" height="420" loading="eager">
+              <div class="polaroid-caption">
+                <span class="caption-handwriting">"Ready to make your place sparkle! ✨"</span>
+                <span class="caption-tag">Miss Molly's Cleaning LLC • (406) 579-6115</span>
+              </div>
+            </div>
+
+            <!-- Fun floating sticker badges -->
+            <div class="sticker-badge sticker-top">
+              <span class="sticker-text">NO CORPORATE FLUFF</span>
+            </div>
+            <div class="sticker-badge sticker-bottom">
+              <span class="sticker-star">★</span>
+              <span>$70/HR HONEST RATE</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. MEET MOLLY & THE NO-FUNNY-BUSINESS PHILOSOPHY -->
+    <!-- ========================================================================= -->
+    <section class="molly-section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-intro text-center">
+          <span class="cute-tag">The Molly Way</span>
+          <h2 class="section-heading">No Funny Business. Just Molly Getting the Job Done.</h2>
+          <p class="section-sub">
+            Let's skip the awkward 45-minute consultation where you apologize for your dust bunnies. Here is how I work:
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          
+          <div class="philosophy-card">
+            <div class="phil-icon-circle">🚫</div>
+            <h3 class="phil-title">No Time Wasters</h3>
+            <p class="phil-text">
+              Your time is precious and mine is too. I don't drag my feet, spend half the time on my phone, or take three hours to wipe down a microwave. I show up, get down to business, and hustle.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="phil-icon-circle">🤝</div>
+            <h3 class="phil-title">No Awkward Walkthroughs</h3>
+            <p class="phil-text">
+              Big agencies love making you do a ceremonial "meet-and-greet" before they even give you a quote. Not here. Tell me what you need, pick a date, and let me come do what I do best.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="phil-icon-circle">🧺</div>
+            <h3 class="phil-title">Zero Judgment Zone</h3>
+            <p class="phil-text">
+              Kids throwing cheerios? Dogs shedding a whole second dog? Three loads of clean clothes chilling on "the chair"? Honey, that's real life. Do <em>not</em> clean up before the cleaner arrives!
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="phil-icon-circle">💪</div>
+            <h3 class="phil-title">Independent &amp; Accountable</h3>
+            <p class="phil-text">
+              You aren't calling an overseas call center or getting a different stranger in your bedroom every week. It's Miss Molly. You talk to me, you book with me, and I take personal pride in every single clean.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Sassy Quote Box -->
+        <div class="molly-quote-banner">
+          <div class="quote-sparkle">❝</div>
+          <p class="quote-text">
+            "I believe in a clean home, a fair wage, and telling people the truth. No hidden fees, no sales scripts. Just good old-fashioned elbow grease."
+          </p>
+          <p class="quote-author">&mdash; Molly Cornes, Owner of Miss Molly's Cleaning LLC</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. RESIDENTIAL SERVICES (The Bread & Butter) -->
+    <!-- ========================================================================= -->
+    <section class="molly-section services-section" id="services">
+      <div class="container">
+
+        <div class="section-intro text-center">
+          <span class="cute-tag">What I Do Best</span>
+          <h2 class="section-heading">Residential Cleaning Services</h2>
+          <p class="section-sub">
+            Homes are my bread and butter. Whether your place needs a regular refresh or a serious top-to-bottom scrub, I've got you covered.
+          </p>
+        </div>
+
+        <div class="services-cards-grid">
+          
+          <!-- Service 1: Regular House Cleaning -->
+          <div class="service-box">
+            <div class="service-box-header">
+              <span class="service-emoji">🏡</span>
+              <span class="service-popular-pill">Most Popular</span>
+            </div>
+            <h3 class="service-title">Regular House Cleaning</h3>
+            <p class="service-desc">
+              The maintenance clean that keeps your life running smoothly. Perfect weekly, bi-weekly, or monthly.
+            </p>
+            <ul class="service-checklist">
+              <li><span>✓</span> Kitchen counters, stove &amp; appliance exteriors</li>
+              <li><span>✓</span> Bathrooms scrubbed, sinks &amp; toilets sanitized</li>
+              <li><span>✓</span> Dusting all reachable surfaces &amp; tabletops</li>
+              <li><span>✓</span> Thorough vacuuming and damp floor mopping</li>
+              <li><span>✓</span> Emptying wastebaskets &amp; general tidying</li>
+            </ul>
+            <div class="service-action">
+              <a href="#booking" class="service-btn" data-service="Standard Cleaning ($70/hr)">Book Regular Clean &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Service 2: Deep Cleaning -->
+          <div class="service-box highlight-box">
+            <div class="service-box-header">
+              <span class="service-emoji">✨</span>
+              <span class="service-popular-pill pill-pink">The Heavy Lifter</span>
+            </div>
+            <h3 class="service-title">Deep Cleaning</h3>
+            <p class="service-desc">
+              For homes that haven't had some love in a while, move-ins/move-outs, or when you just need a totally fresh start.
+            </p>
+            <ul class="service-checklist">
+              <li><span>✓</span> Everything in the Regular Clean, plus:</li>
+              <li><span>✓</span> Baseboards wiped down from top to bottom</li>
+              <li><span>✓</span> Deep bathroom descaling &amp; tile scrub</li>
+              <li><span>✓</span> Inside microwave &amp; heavy stove grease removal</li>
+              <li><span>✓</span> Cabinet exteriors wiped down &amp; detail dust</li>
+            </ul>
+            <div class="service-action">
+              <a href="#booking" class="service-btn btn-pink-text" data-service="Deep Clean ($70/hr or Flat Rate)">Book a Deep Clean &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Service 3: Laundry Services -->
+          <div class="service-box">
+            <div class="service-box-header">
+              <span class="service-emoji">🧺</span>
+              <span class="service-popular-pill">Life Saver</span>
+            </div>
+            <h3 class="service-title">Laundry Services</h3>
+            <p class="service-desc">
+              Hate the endless pile of laundry? Let Molly handle it. I wash, dry, fold, and stack while your house gets cleaned.
+            </p>
+            <ul class="service-checklist">
+              <li><span>✓</span> Sorting, washing, drying &amp; folding</li>
+              <li><span>✓</span> Bed sheet stripping &amp; fresh remaking</li>
+              <li><span>✓</span> Towels folded and neatly stacked</li>
+              <li><span>✓</span> Handled right in your home machines</li>
+              <li><span>✓</span> <strong>Only $75/hr</strong> for clean + laundry combined!</li>
+            </ul>
+            <div class="service-action">
+              <a href="#booking" class="service-btn" data-service="Cleaning + Laundry ($75/hr)">Book Clean + Laundry &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Service 4: Custom Cleaning Jobs -->
+          <div class="service-box">
+            <div class="service-box-header">
+              <span class="service-emoji">🧰</span>
+              <span class="service-popular-pill">Flexible</span>
+            </div>
+            <h3 class="service-title">Custom Cleaning Jobs</h3>
+            <p class="service-desc">
+              Got a weird or specific cleaning project? Fridge disaster? Post-party recovery? Cluttered pantry overhaul?
+            </p>
+            <ul class="service-checklist">
+              <li><span>✓</span> Inside refrigerator &amp; freezer deep scrub</li>
+              <li><span>✓</span> Oven interior baked-on grease removal</li>
+              <li><span>✓</span> Move-in / move-out turnover cleanouts</li>
+              <li><span>✓</span> Seasonal garage or porch tidying</li>
+              <li><span>✓</span> Request a transparent flat-rate quote</li>
+            </ul>
+            <div class="service-action">
+              <a href="#booking" class="service-btn" data-service="Custom / Flat-Rate Job">Request Flat Rate Quote &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. CLEAR HOURLY PRICING (No Secrets, No Gimmicks) -->
+    <!-- ========================================================================= -->
+    <section class="molly-section pricing-section" id="pricing">
+      <div class="container">
+
+        <div class="section-intro text-center">
+          <span class="cute-tag">Clear &amp; Upfront</span>
+          <h2 class="section-heading">Straightforward Pricing. No Mysteries.</h2>
+          <p class="section-sub">
+            Most cleaning companies hide their prices behind quote calculators and salespeople. I believe you should know exactly what you're paying before we even talk.
+          </p>
+        </div>
+
+        <div class="pricing-cards-container">
+          
+          <!-- Standard Rate -->
+          <div class="pricing-card">
+            <div class="rate-badge">Standard</div>
+            <h3 class="rate-title">Standard Cleaning</h3>
+            <div class="rate-price">
+              <span class="currency">$</span>
+              <span class="number">70</span>
+              <span class="period">/ hour</span>
+            </div>
+            <p class="rate-summary">All standard residential cleaning, kitchens, bathrooms, floors, and general house care.</p>
+            <ul class="rate-features">
+              <li><span>✓</span> Thorough, energetic, honest work</li>
+              <li><span>✓</span> Professional-grade supplies included</li>
+              <li><span>✓</span> Pay only for the actual time worked</li>
+              <li><span>✓</span> No minimum multi-month contracts</li>
+            </ul>
+            <a href="#booking" class="btn btn-warm-cream btn-block" data-service="Standard Cleaning ($70/hr)">Book at $70/hr</a>
+          </div>
+
+          <!-- Laundry Included Rate (Highlighted) -->
+          <div class="pricing-card card-featured">
+            <div class="featured-ribbon">Molly's Favorite</div>
+            <div class="rate-badge badge-featured">Cleaning + Laundry</div>
+            <h3 class="rate-title">Cleaning with Laundry</h3>
+            <div class="rate-price">
+              <span class="currency">$</span>
+              <span class="number">75</span>
+              <span class="period">/ hour</span>
+            </div>
+            <p class="rate-summary">I clean your home <em>and</em> run your laundry simultaneously. Wash, dry, fold, stack. Absolute bliss.</p>
+            <ul class="rate-features">
+              <li><span>✓</span> Everything in standard cleaning</li>
+              <li><span>✓</span> Clothes washed, dried, neatly folded</li>
+              <li><span>✓</span> Bedding stripped &amp; remade with fresh sheets</li>
+              <li><span>✓</span> Towels washed and fluffed</li>
+            </ul>
+            <a href="#booking" class="btn btn-pink-pop btn-block" data-service="Cleaning + Laundry ($75/hr)">Book with Laundry at $75/hr</a>
+          </div>
+
+          <!-- Flat Rate & Custom Card -->
+          <div class="pricing-card">
+            <div class="rate-badge">One-Offs</div>
+            <h3 class="rate-title">Custom Flat-Rate Jobs</h3>
+            <div class="rate-price">
+              <span class="number-flat">Honest Flat Rate</span>
+            </div>
+            <p class="rate-summary">Got a move-out clean, a post-party rescue, or a commercial space? I'll give you a single fixed flat rate.</p>
+            <ul class="rate-features">
+              <li><span>✓</span> Upfront agreed price before I start</li>
+              <li><span>✓</span> No surprises when the bill arrives</li>
+              <li><span>✓</span> Perfect for rentals, offices &amp; cafes</li>
+              <li><span>✓</span> Tailored to your exact checklist</li>
+            </ul>
+            <a href="#booking" class="btn btn-warm-cream btn-block" data-service="Custom / Flat-Rate Job">Request a Flat Rate</a>
+          </div>
+
+        </div>
+
+        <!-- Travel & Gas Policy Card -->
+        <div class="travel-policy-banner">
+          <div class="travel-icon">🚗</div>
+          <div class="travel-text">
+            <h4 class="travel-title">Have Mop, Will Travel!</h4>
+            <p class="travel-desc">
+              My regular service area covers <strong>Bozeman, Belgrade, Four Corners, Manhattan, and Gallatin Gateway</strong>. But if you live further out in Three Forks, Livingston, Big Sky, or neighboring towns, I'm more than happy to come your way! All I ask is that travel/gas expenses are covered. Just drop your address in the booking form and I'll let you know what gas looks like.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. COMMERCIAL & COFFEE SHOP CLEANING -->
+    <!-- ========================================================================= -->
+    <section class="molly-section commercial-section" id="commercial">
+      <div class="container">
+
+        <div class="commercial-box-wrapper">
+          <div class="commercial-content">
+            <span class="cute-tag tag-coffee">☕ Beyond the House</span>
+            <h2 class="commercial-heading">Need a Coffee Shop or Commercial Space Cleaned? I Do That Too.</h2>
+            
+            <p class="commercial-lead">
+              While residential homes are my favorite sweet spot, I'm fully equipped with commercial supplies, heavy-duty vacs, and the stamina to keep local businesses looking pristine.
+            </p>
+
+            <div class="commercial-perks-list">
+              <div class="perk-row">
+                <span class="perk-bullet">☕</span>
+                <div>
+                  <strong>Coffee Shops &amp; Cafes:</strong>
+                  <span>Espresso machine syrup wipe-downs, sticky café tables, customer restroom sanitation, floor scrubbing, and garbage disposal before the morning rush.</span>
+                </div>
+              </div>
+
+              <div class="perk-row">
+                <span class="perk-bullet">🏢</span>
+                <div>
+                  <strong>Boutiques, Studios &amp; Small Offices:</strong>
+                  <span>Keep your workplace fresh and welcoming without getting locked into overpriced corporate janitorial contracts.</span>
+                </div>
+              </div>
+
+              <div class="perk-row">
+                <span class="perk-bullet">📋</span>
+                <div>
+                  <strong>Larger Contracted Cleaning Projects:</strong>
+                  <span>Ongoing weekly commercial contracts, studio turnovers, or larger contracted projects. Reliable, vetted, and always done right.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="commercial-cta-row">
+              <a href="#booking" class="btn btn-pink-pop" data-service="Coffee Shop / Commercial">Let's Get You Booked</a>
+              <span class="commercial-note">Early morning or after-hours availability upon request.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. EASY BOOKING REQUEST FORM (PRIMARY CONVERSION GOAL) -->
+    <!-- ========================================================================= -->
+    <section class="molly-section booking-section" id="booking">
+      <div class="container">
+
+        <div class="booking-card">
+          <div class="booking-header text-center">
+            <span class="cute-tag tag-booking">Fast &amp; Easy</span>
+            <h2 class="booking-title">Let's Get You Booked!</h2>
+            <p class="booking-sub">
+              No complicated live calendar to fight with. Fill out this quick request, and Molly will review her schedule and get back to you promptly to confirm your cleaning spot!
+            </p>
+          </div>
+
+          <form id="molly-booking-form" class="molly-form" novalidate>
+            <div class="form-grid">
+              
+              <!-- Customer Name -->
+              <div class="form-field">
+                <label for="cust-name" class="field-label">Customer Name <span class="req">*</span></label>
+                <input type="text" id="cust-name" name="name" class="input-text" placeholder="e.g. Sarah Jenkins" required autocomplete="name">
+                <span class="field-error" id="err-name">Please share your name!</span>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-field">
+                <label for="cust-phone" class="field-label">Phone Number (Mobile for quick text) <span class="req">*</span></label>
+                <input type="tel" id="cust-phone" name="phone" class="input-text" placeholder="e.g. (406) 555-0123" required autocomplete="tel">
+                <span class="field-error" id="err-phone">Please enter a valid phone number.</span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-field">
+                <label for="cust-email" class="field-label">Email Address <span class="req">*</span></label>
+                <input type="email" id="cust-email" name="email" class="input-text" placeholder="e.g. sarah@example.com" required autocomplete="email">
+                <span class="field-error" id="err-email">Please enter a valid email address.</span>
+              </div>
+
+              <!-- Cleaning Address -->
+              <div class="form-field">
+                <label for="cust-address" class="field-label">Cleaning Address (Street, City, Zip) <span class="req">*</span></label>
+                <input type="text" id="cust-address" name="address" class="input-text" placeholder="e.g. 124 Main St, Bozeman, MT" required autocomplete="street-address">
+                <span class="field-error" id="err-address">Please provide the address to be cleaned.</span>
+              </div>
+
+              <!-- Type of Cleaning -->
+              <div class="form-field">
+                <label for="cust-service" class="field-label">Type of Cleaning <span class="req">*</span></label>
+                <select id="cust-service" name="service" class="input-select" required>
+                  <option value="" disabled selected>Select what you need...</option>
+                  <option value="Standard Cleaning ($70/hr)">Standard Residential Clean ($70/hr)</option>
+                  <option value="Cleaning + Laundry ($75/hr)">Cleaning with Laundry ($75/hr)</option>
+                  <option value="Deep Clean ($70/hr or Flat Rate)">Deep House Clean</option>
+                  <option value="Coffee Shop / Commercial">Coffee Shop / Commercial Clean</option>
+                  <option value="Custom / Flat-Rate Job">Custom Job (Pantry, Fridge, Move-Out, etc.)</option>
+                </select>
+                <span class="field-error" id="err-service">Please pick a cleaning type.</span>
+              </div>
+
+              <!-- Preferred Date/Time -->
+              <div class="form-field">
+                <label for="cust-date" class="field-label">Preferred Date &amp; Time <span class="req">*</span></label>
+                <input type="text" id="cust-date" name="preferred_date" class="input-text" placeholder="e.g. Next Tuesday morning or Thursdays after 1pm" required>
+                <span class="field-error" id="err-date">Please share what day/time works best for you.</span>
+              </div>
+
+              <!-- Additional Details -->
+              <div class="form-field form-field-wide">
+                <label for="cust-notes" class="field-label">Additional Details / Tell Molly about your space <span class="opt">(Optional)</span></label>
+                <textarea id="cust-notes" name="notes" rows="3" class="input-textarea" placeholder="Number of bedrooms/bathrooms, pets, special focus areas, laundry details, or anything I should know!"></textarea>
+              </div>
+
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-submit-block">
+              <button type="submit" class="btn btn-pink-pop btn-submit-molly" id="booking-submit-btn">
+                <span>Book a Cleaning with Molly! 🧹</span>
+              </button>
+            </div>
+
+            <!-- Feedback Message -->
+            <div class="booking-feedback" id="booking-feedback" role="alert" aria-live="polite" hidden></div>
+
+            <p class="form-reassurance">
+              🔒 Molly respects your privacy. No spam, no marketing emails, just honest scheduling.
+            </p>
+          </form>
+
+          <!-- Alternative Call/Text Direct Box -->
+          <div class="direct-molly-box">
+            <p class="direct-lead">Prefer to just talk or shoot a text right now?</p>
+            <p class="direct-sub">I'm usually out making places sparkle, but I check my phone between jobs:</p>
+            <div class="direct-buttons">
+              <a href="tel:+14065796115" class="btn btn-call-molly">📞 Call (406) 579-6115</a>
+              <a href="sms:+14065796115" class="btn btn-text-molly">💬 Text (406) 579-6115</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8. SHORT FAQ -->
+    <!-- ========================================================================= -->
+    <section class="molly-section faq-section" id="faq">
+      <div class="container">
+
+        <div class="section-intro text-center">
+          <span class="cute-tag">Good to Know</span>
+          <h2 class="section-heading">Frequently Asked Questions</h2>
+          <p class="section-sub">
+            Straightforward answers to the questions folks ask most.
+          </p>
+        </div>
+
+        <div class="faq-accordion-molly">
+
+          <div class="faq-row">
+            <button type="button" class="faq-q-btn" aria-expanded="false">
+              <span>How does your pricing work? Any sneaky hidden fees?</span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a-body">
+              <p>Zero sneaky fees. Standard cleaning is $70/hour. If you want me to do your laundry while cleaning, it's $75/hour. You pay for the time I spend working. If we agree on a flat-rate quote for a specific one-off or commercial job, that agreed price is what you pay. Period.</p>
+            </div>
+          </div>
+
+          <div class="faq-row">
+            <button type="button" class="faq-q-btn" aria-expanded="false">
+              <span>Will you travel outside your regular service area?</span>
+              <span class="faq-icon-plus">+</span>
+            </button>
+            <div class="faq-a-body">
+              <p>Yes, absolutely! I regularly serve Bozeman, Belgrade, Four Corners, Manhattan, and Gallatin Gateway, and I'm happy to travel to Three Forks, Livingston, Big Sky, and surrounding towns as long as gas/travel expenses are covered. Just put your address in the booking form and I'll calculate gas upfront.</p>
+            </div>
+          </div>
+
+          <div class="faq-row">
+            <button type="button" class="faq-q-btn" aria-expanded="false">
+              <span>How does scheduling and availability work?</span>
+              <span class="faq-icon-plus">+</span>
+            </button>
+            <div class="faq-a-body">
+              <p>I keep my own schedule so there's no double-booking madness. Submit your preferred days/times in the booking request form (or text me at (406) 579-6115), and I'll personally reply to confirm your spot. Need to skip or reschedule a visit? Just text me with a little notice — no contracts or cancellation games.</p>
+            </div>
+          </div>
+
+          <div class="faq-row">
+            <button type="button" class="faq-q-btn" aria-expanded="false">
+              <span>What about custom jobs, supplies, or pets?</span>
+              <span class="faq-icon-plus">+</span>
+            </button>
+            <div class="faq-a-body">
+              <p>I bring all my own professional supplies, scrubbers, fresh microfiber cloths, and vacuums (or I can use your favorite specialty cleaners if you prefer). I love dogs and cats — just let me know if they're friendly or door-darters! And if you have a custom job like an oven, fridge overhaul, or move-out, just ask for an honest flat-rate quote.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 9. FRIENDLY FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="molly-footer">
+    <div class="container footer-grid">
+      
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <span class="footer-sparkle">🧹</span>
+          <span class="footer-title">Miss Molly's Cleaning LLC</span>
+        </div>
+        <p class="footer-desc">
+          Honest, hard-working, down-home cleaning in Bozeman, MT &amp; the Gallatin Valley. No funny business, no corporate scripts. Serving homes, laundry piles, coffee shops, and commercial spaces.
+        </p>
+        <p class="footer-tagline">
+          <em>&ldquo;Life is too short to spend your Saturdays scrubbing toilets.&rdquo;</em>
+        </p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="footer-h4">Quick Links</h4>
+        <ul class="footer-list">
+          <li><a href="#about">Meet Molly</a></li>
+          <li><a href="#services">House Cleaning &amp; Laundry</a></li>
+          <li><a href="#pricing">Hourly Pricing ($70/hr)</a></li>
+          <li><a href="#commercial">Commercial &amp; Coffee Shops</a></li>
+          <li><a href="#booking">Book a Cleaning</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <h4 class="footer-h4">Get in Touch</h4>
+        <ul class="footer-contact-items">
+          <li>
+            <span>📞</span>
+            <a href="tel:+14065796115"><strong>Call: (406) 579-6115</strong></a>
+          </li>
+          <li>
+            <span>💬</span>
+            <a href="sms:+14065796115"><strong>Text: (406) 579-6115</strong></a>
+          </li>
+          <li>
+            <span>⏰</span>
+            <span>Monday &ndash; Saturday: 8:00 AM &ndash; 6:00 PM</span>
+          </li>
+          <li>
+            <span>🚗</span>
+            <span>Bozeman, MT &amp; surrounding towns (travel outside area available with gas covered!)</span>
+          </li>
+        </ul>
+        <div class="footer-cta-box">
+          <a href="#booking" class="btn btn-pink-pop btn-sm">Let's Get You Booked!</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="year">2026</span> Miss Molly's Cleaning LLC. All rights reserved.</p>
+        <p class="footer-humor">Locally owned by Molly Cornes &bull; BBB Accredited (A-) &bull; 100% judgment-free cleaning.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom Quick Action Bar for Mobile -->
+  <aside class="mobile-sticky-molly" aria-label="Mobile Quick Booking and Call">
+    <a href="tel:+14065796115" class="mob-sticky-btn mob-call">
+      <span>📞 Call</span>
+    </a>
+    <a href="sms:+14065796115" class="mob-sticky-btn mob-sms">
+      <span>💬 Text</span>
+    </a>
+    <a href="#booking" class="mob-sticky-btn mob-book">
+      <span>✨ Book Now</span>
+    </a>
+  </aside>
+
+  <script src="script.js"></script>
 </body>
 </html>
